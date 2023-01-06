@@ -1,11 +1,10 @@
 import numpy as np
 from stl.mesh import Mesh
-from tvtk.api import tvtk
 from mayavi import mlab
-import matplotlib.pyplot as plt
+import sys
 
-STL_FILE = "lucy.stl"
-SDF_FILE = "lucy_u"
+STL_FILE = sys.argv[1]
+SDF_FILE = sys.argv[2]
 
 # Read STL
 m = Mesh.from_file(STL_FILE)
